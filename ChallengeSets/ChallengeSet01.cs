@@ -28,14 +28,7 @@ namespace ChallengeSets
             {
                 return number1;
             }
-            else if (number2 < number1)
-            {
-                return number2;
-            }
-            else
-            {
-                return Convert.ToInt32("error");
-            }
+            return number2;
         }
 
         public long Multiply(long factor1, long factor2)
@@ -45,12 +38,16 @@ namespace ChallengeSets
 
         public string GetGreeting(string nameOfPerson)
         {
-            return $"Hello, (name).";
+            if (nameOfPerson != "")
+            {
+                return $"Hello, {nameOfPerson}!";
+            }
+            return "Hello!";
         }
 
         public string GetHey()
         {
-            return "Hey";
+            return "HEY!";
         }
     }
 }
